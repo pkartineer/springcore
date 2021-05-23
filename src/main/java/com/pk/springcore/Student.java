@@ -1,9 +1,24 @@
 package com.pk.springcore;
 
 public class Student {
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", studentName='" + studentName + '\'' +
+                ", studentAddress='" + studentAddress + '\'' +
+                '}';
+    }
+
     private int studentId;
     private String studentName;
     private String studentAddress;
+
+    public Student(int studentId, String studentName, String studentAddress) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.studentAddress = studentAddress;
+    }
 
     public int getStudentId() {
         return studentId;
@@ -29,6 +44,9 @@ public class Student {
         this.studentAddress = studentAddress;
     }
 
-
+    public Student() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
 }
