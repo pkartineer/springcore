@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+        <bean class="com.pk.springcore.ref.B" name="bref">
+            <property name="b" value="20"></property>
+<!--            <property name="oa">-->
+<!--                &lt;!&ndash; reference of A class to make object&ndash;&gt;-->
+<!--                <ref bean="aref"></ref>-->
+<!--            </property>-->
+        </bean>
+
+<!--        <bean class="com.pk.springcore.ref.A" name="aref">-->
+<!--            <property name="a" value="10"></property>-->
+<!--&lt;!&ndash;            <property name="ob">&ndash;&gt;-->
+<!--&lt;!&ndash;                &lt;!&ndash; reference of B class to make object&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <ref bean="bref"></ref>&ndash;&gt;-->
+<!--&lt;!&ndash;            </property>&ndash;&gt;-->
+<!--            <property name="ob" ref="bref" />-->
+<!--        </bean>-->
+
+    <bean class="com.pk.springcore.ref.A" name="aref" p:a="10" p:ob-ref="bref" />
+
+</beans>
