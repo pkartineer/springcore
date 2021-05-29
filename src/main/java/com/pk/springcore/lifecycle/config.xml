@@ -10,4 +10,7 @@
 
         <bean class="com.pk.springcore.lifecycle.Samosa" name="samosa1" p:price="8"
         init-method="init"  destroy-method="destroy" />
+
+
+
 </beans>
