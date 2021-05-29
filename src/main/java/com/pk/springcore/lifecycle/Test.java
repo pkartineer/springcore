@@ -12,13 +12,19 @@ public class Test {
 
         //registerShutdownHook so that destroy method can be call
         abstractApplicationContext.registerShutdownHook();
-        Samosa samosa =  (Samosa)abstractApplicationContext.getBean("samosa1");
-        System.out.println(samosa);
+
+        //        Samosa samosa =  (Samosa)abstractApplicationContext.getBean("samosa1");
+        //        System.out.println(samosa);
 
 
+//
+//        System.out.println("===========================================");
+//        Pepsi pepsi =  (Pepsi)abstractApplicationContext.getBean("pepsi1");
+//        System.out.println(pepsi);
 
-        System.out.println("===========================================");
-        Pepsi pepsi =  (Pepsi)abstractApplicationContext.getBean("pepsi1");
-        System.out.println(pepsi);
+        Example example =  (Example)abstractApplicationContext.getBean("example1");
+        System.out.println(example);
+
+
     }
 }
