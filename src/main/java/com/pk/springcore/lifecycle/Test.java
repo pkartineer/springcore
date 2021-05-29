@@ -9,10 +9,16 @@ public class Test {
         //Use AbstractApplicationContext instead of ApplicationContext
         //to register registerShutdownHook
         AbstractApplicationContext abstractApplicationContext = new ClassPathXmlApplicationContext("com/pk/springcore/lifecycle/config.xml");
-        Samosa samosa =  (Samosa)abstractApplicationContext.getBean("samosa1");
-        System.out.println(samosa);
 
         //registerShutdownHook so that destroy method can be call
         abstractApplicationContext.registerShutdownHook();
+        Samosa samosa =  (Samosa)abstractApplicationContext.getBean("samosa1");
+        System.out.println(samosa);
+
+
+
+        System.out.println("===========================================");
+        Pepsi pepsi =  (Pepsi)abstractApplicationContext.getBean("pepsi1");
+        System.out.println(pepsi);
     }
 }
