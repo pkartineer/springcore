@@ -13,6 +13,4 @@
 
         <bean class="com.pk.springcore.lifecycle.Pepsi" name="pepsi1" p:price="35" />
 
-
-
 </beans>
