@@ -11,6 +11,7 @@
         <bean class="com.pk.springcore.lifecycle.Samosa" name="samosa1" p:price="8"
         init-method="init"  destroy-method="destroy" />
 
-        <bean class="com.pk.springcore.lifecycle.Pepsi" name="pepsi1" p:price="35" />
+        <!-- sp_Implementing_bean_life_cycle_using_interfaces -->
+        <bean class="com.pk.springcore.lifecycle.Pepsi" name="pepsi1" p:price="35" /
 
 </beans>
