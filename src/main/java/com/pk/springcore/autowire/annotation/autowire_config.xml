@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    //@Autowired uses Type/constructor method for autowire
+    //so you can give object name address1, or address2 or anything..
+    <bean class="com.pk.springcore.autowire.annotation.Address" name="address1" p:street="2" p:city="Jalandhar" />
+    <bean class="com.pk.springcore.autowire.annotation.Emp" name="emp" />
+
+</beans>
