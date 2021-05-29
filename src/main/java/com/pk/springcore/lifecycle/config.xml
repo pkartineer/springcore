@@ -8,10 +8,15 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-        <bean class="com.pk.springcore.lifecycle.Samosa" name="samosa1" p:price="8"
-        init-method="init"  destroy-method="destroy" />
+<!--        To enable all annotation-->
+        <context:annotation-config />
+<!--        <bean class="com.pk.springcore.lifecycle.Samosa" name="samosa1" p:price="8"-->
+<!--        init-method="init"  destroy-method="destroy" />-->
 
-        <!-- sp_Implementing_bean_life_cycle_using_interfaces -->
-        <bean class="com.pk.springcore.lifecycle.Pepsi" name="pepsi1" p:price="35" /
+<!--         sp_Implementing_bean_life_cycle_using_interfaces -->
+<!--        <bean class="com.pk.springcore.lifecycle.Pepsi" name="pepsi1" p:price="35" />-->
+
+        <!-- Implementing Bean LifeCyle using Annotations-->
+        <bean class="com.pk.springcore.lifecycle.Example" name="example1" p:subject="JAVA" />
 
 </beans>
