@@ -22,5 +22,7 @@
         <!--        This will also scan the sub folders-->
         <context:component-scan base-package="com.pk.springcore" />
 
+        <bean class="com.pk.springcore.stereotype.Teacher" name="teacher" scope="protoype">
+        </bean>
 
 </beans>
