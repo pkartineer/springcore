@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <!-- standalone list-->
+    <util:list list-class="java.util.LinkedList" id="myBestFriends">
+        <value>Pawan</value>
+        <value>Rajat</value>
+        <value>Sattu</value>
+    </util:list>
+
+    <!-- standalone map-->
+    <util:map map-class="java.util.HashMap" id="fees">
+        <entry key="C" value="100" />
+        <entry key="JAVA" value="200" />
+        <entry key="Spring" value="300" />
+    </util:map>
+
+    <!-- standalone perperties-->
+    <util:properties id="dbconfig">
+        <prop key="driver">com.mysql.jdbc.Driver</prop>
+        <prop key="username">pawan</prop>
+        <prop key="password">123</prop>
+        <prop key="url">mysql:jdbc//localhost:3306/database</prop>
+    </util:properties>
+
+    <bean class="com.pk.springcore.standalone.collections.Person" name="person1">
+<!--        <property name="friends">-->
+<!--            <ref bean="myBestFriends"></ref>-->
+<!--        </property>-->
+
+        <property name="friends" ref="myBestFriends" />
+        <property name="feeStructure" ref="fees" />
+        <property name="properties" ref="dbconfig" />
+
+
+    </bean>
+
+
+
+</beans>
