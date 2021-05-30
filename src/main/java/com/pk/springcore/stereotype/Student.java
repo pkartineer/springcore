@@ -3,6 +3,9 @@ package com.pk.springcore.stereotype;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.math.BigInteger;
+import java.util.List;
+
 //To create bean. by defaul refrence variable name is 'ClassName' in camel format
 //@Component
 
@@ -15,14 +18,24 @@ public class Student {
     @Value("Jalandhar")
     private String city;
 
-
+    @Value("#{mobileList}")
+    private List<String> contact;
 
     @Override
     public String toString() {
         return "Student{" +
                 "studentName='" + studentName + '\'' +
                 ", city='" + city + '\'' +
+                ", contact=" + contact +
                 '}';
+    }
+
+    public List<String> getContact() {
+        return contact;
+    }
+
+    public void setContact(List<String> contact) {
+        this.contact = contact;
     }
 
     public String getStudentName() {
