@@ -3,10 +3,19 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:context="http://www.springframework.org/schema/context"
         xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:util="http://www.springframework.org/schema/util"
         xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+        <util:list list-class="java.util.ArrayList" id="mobileList">
+                <value>4323424</value>
+                <value>6546456</value>
+                <value>6456456</value>
+        </util:list>
 
 <!--        This will scan the all Files having @Component to create bean-->
 <!--        <context:component-scan base-package="com.pk.springcore.stereotype" />-->
