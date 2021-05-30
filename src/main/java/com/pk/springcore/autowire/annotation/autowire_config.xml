@@ -10,9 +10,11 @@
 
     <context:annotation-config/>
 
-    //@Autowired uses Type/constructor method for autowire
-    //so you can give object name address1, or address2 or anything..
+<!--    //@Autowired uses Type/constructor method for autowire-->
+<!--    //so you can give object name address1, or address2 or anything..-->
     <bean class="com.pk.springcore.autowire.annotation.Address" name="address1" p:street="2" p:city="Jalandhar" />
+    <bean class="com.pk.springcore.autowire.annotation.Address" name="address2" p:street="3" p:city="Jalandhar2" />
+
     <bean class="com.pk.springcore.autowire.annotation.Emp" name="emp" />
 
 </beans>
