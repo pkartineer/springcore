@@ -12,8 +12,8 @@ import java.util.List;
 
 //user  defined reference variable name 'stu'
 @Component("stu")
-//Each time it will container send New Object in each call
-//ByDefaul is "singleton" in which container send same object in each call
+//Each time container send New Object in each call
+//By Default is "singleton" in which container send same object in each call
 //in Xml <bean class="" name="" Scope="protoype" />
 @Scope("prototype")
 public class Student {
