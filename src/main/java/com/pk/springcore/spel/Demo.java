@@ -25,6 +25,11 @@ public class Demo {
     @Value("#{ new java.lang.String('Pawan Kumar')}")
     private String name;
 
+    //Booleans value using expression
+    //@Value("true")
+    @Value("#{2>1}")
+    private boolean isActive;
+
 
     @Override
     public String toString() {
@@ -34,7 +39,16 @@ public class Demo {
                 ", z=" + z +
                 ", d=" + d +
                 ", name='" + name + '\'' +
+                ", isActive=" + isActive +
                 '}';
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 
     public String getName() {
